@@ -1,0 +1,4 @@
+(function() {
+  var markersData = <%= raw @hash.to_json %>;
+  updateMarkers(mapHandler, markersData);
+})();
