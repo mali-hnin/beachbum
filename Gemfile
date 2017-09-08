@@ -37,8 +37,8 @@ gem 'font-awesome-rails'
 
 # Specific gems
 gem 'geocoder'
-
-gem "gmaps4rails"
+gem 'gmaps4rails'
+gem 'cloudinary'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
