@@ -1,7 +1,8 @@
 <div class='container'>
   <h2><%= beach.name %></h2>
   <p><%= beach.address %>, <%= beach.country %></p>
-  <p>Type: <%= beach.category %></p>
+  <p>Category: <%= beach.category %></p>
+  <p>Sand Type: <%= beach.sand_type %></p>
   <p>Price: <%= beach.price %></p>
   <p>Beach Sports: <% beach.beach_sports.each do |sport| %>
     <%= sport %> |
