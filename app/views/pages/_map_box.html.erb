@@ -1,0 +1,16 @@
+<div class='container'>
+  <h2><%= beach.name %></h2>
+  <p><%= beach.address %>, <%= beach.country %></p>
+  <p>Type: <%= beach.category %></p>
+  <p>Price: <%= beach.price %></p>
+  <p>Beach Sports: <% beach.beach_sports.each do |sport| %>
+    <%= sport %> |
+    <% end %>
+  </p>
+  <p>Water Sports: <% beach.water_sports.each do |sport| %>
+    <%= sport %> |
+    <% end %>
+  </p>
+  <p>How crowded is it? <%= beach.crowd %></p>
+  <p>How long do I have to walk? <%= beach.walking_distance %>m</p>
+</div>
