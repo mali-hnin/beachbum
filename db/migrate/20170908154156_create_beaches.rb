@@ -10,8 +10,8 @@ class CreateBeaches < ActiveRecord::Migration[5.1]
       t.boolean :nude_friendly
       t.boolean :pet_friendly
       t.boolean :surf
-      t.array :beach_sports
-      t.array :water_sports
+      t.string :beach_sports, array: true
+      t.string :water_sports, array: true
       t.integer :crowd
       t.float :latitude
       t.float :longitude
