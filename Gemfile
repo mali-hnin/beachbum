@@ -35,6 +35,10 @@ gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
+
+
+gem 'nokogiri'
+
 # Specific gems
 gem 'geocoder'
 gem 'gmaps4rails'
@@ -43,3 +47,4 @@ gem 'cloudinary'
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
+
