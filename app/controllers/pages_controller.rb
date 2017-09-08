@@ -6,12 +6,12 @@ class PagesController < ApplicationController
       marker.lat beach.latitude
       marker.lng beach.longitude
     end
+    p @hash
   end
 
   def search
     @location = params[:address]
-
-    @beaches = Beach.where(address: @location)
+    @beaches = Beach.near("#{@location}, Portugal", 40, units: :km)
 
     @hash = Gmaps4rails.build_markers(@beaches) do |beach, marker|
       marker.lat beach.latitude
