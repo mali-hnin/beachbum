@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170908154156) do
+
+ActiveRecord::Schema.define(version: 20170908165922) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "beaches", force: :cascade do |t|
     t.string "name"
-    t.string "location"
     t.string "category"
     t.boolean "bar"
     t.integer "price"
@@ -38,6 +39,8 @@ ActiveRecord::Schema.define(version: 20170908154156) do
     t.string "sand_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address"
+
   end
 
 end

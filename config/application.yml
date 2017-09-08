@@ -1,0 +1,6 @@
+# Google keys
+GOOGLE_SERVER_KEY: "AIzaSyDN6R4rHaMV1DXSlyEfFzbPUUd4nzxfBGg"
+GOOGLE_BROWSER_KEY: "AIzaSyCVt_XBoces48Rdwp_3pZ2npHUoYLtake8"
+
+# Cloudinary key
+CLOUDINARY_URL: "cloudinary://931196692219334:xASIlLlMx3g31eHlR-MWSkj5Eh8@gabrielecanepa"
