@@ -3,26 +3,21 @@
   <%= f.submit %>
 <% end %>
 
-<div id="map" style="width: 100%; height: 600px;"></div>
+<div id="map" style="width: 100%; height: 100vh;"></div>
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
-    function startMap(markers_hash) {
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function() {
-        markers = handler.addMarkers(markers_hash);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-        if (markers.length == 0) {
-          handler.getMap().setZoom(2);
-        } else if (markers.length == 1) {
-          handler.getMap().setZoom(14);
-        }
+    $(document).ready(function() {
+       mapHandler = Gmaps.build('Google');
+       var middle = <%= @hash.length / 2 %>
+       mapHandler.buildMap({ provider: {
+       center: new google.maps.LatLng(<%= raw @hash.to_json %>[middle].lat, <%= raw @hash.to_json %>[middle].lng),
+       zoom: 10,
+         }, internal: {id: 'map'}
+       }, function(){
+         var markersData = <%= raw @hash.to_json %>;
+         updateMarkers(mapHandler, markersData);
+       });
       });
-    };
-
-    $(document).ready(
-      startMap(<%= raw @hash.to_json %>);
-    });
   <% end %>
 <% end %>
