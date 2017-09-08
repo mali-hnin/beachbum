@@ -5,7 +5,21 @@ class PagesController < ApplicationController
     @hash = Gmaps4rails.build_markers(@beaches) do |beach, marker|
       marker.lat beach.latitude
       marker.lng beach.longitude
-      # marker.infowindow render_to_string(partial: "/pages/map_box", locals: { beach: beach })
+    end
+  end
+
+  def search
+    @location = params[:address]
+
+    @beaches = Beach.where(address: @location)
+
+    @hash = Gmaps4rails.build_markers(@beaches) do |beach, marker|
+      marker.lat beach.latitude
+      marker.lng beach.longitude
+    end
+
+    respond_to do |format|
+      format.js
     end
   end
 end
