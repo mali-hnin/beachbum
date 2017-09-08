@@ -1,20 +1,25 @@
 class PagesController < ApplicationController
-  def index
-    @beaches = Beach.where.not(latitude: nil, longitude: nil)
-
-    @hash = Gmaps4rails.build_markers(@beaches) do |beach, marker|
-      marker.lat .latitude
-      marker.lng flat.longitude
-    end
-  end
-
   def home
     @beaches = Beach.where.not(latitude: nil, longitude: nil)
 
     @hash = Gmaps4rails.build_markers(@beaches) do |beach, marker|
-      marker.lat flat.latitude
-      marker.lng flat.longitude
-      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+      marker.lat beach.latitude
+      marker.lng beach.longitude
+    end
+  end
+
+  def search
+    @location = params[:address]
+
+    @beaches = Beach.where(address: @location)
+
+    @hash = Gmaps4rails.build_markers(@beaches) do |beach, marker|
+      marker.lat beach.latitude
+      marker.lng beach.longitude
+    end
+
+    respond_to do |format|
+      format.js
     end
   end
 end
