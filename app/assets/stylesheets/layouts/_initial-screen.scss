@@ -1,5 +1,5 @@
 .initial-screen__wrapper {
-  background: url('http://images.huffingtonpost.com/2016-03-18-1458279164-1804018-image1.JPG');
+  background: url('https://cdn.pixabay.com/photo/2013/02/21/19/10/beach-84631_1280.jpg');
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -11,21 +11,33 @@
   justify-content: space-around;
   height: 100%;
   width: 100%;
-  background-color: rgba(131, 201, 244, 0.93);
-}
-
-.initial-screen__cta {
-  h1, h2 {
-    font-size: 100px;
-    color: white;
-  }
-  h1 {
-    font-size: 200px;
-    margin-bottom: 50px;
-  }
+  background-color: rgba(131, 201, 244, 0.4);
 }
 
 .initial-screen__logo {
+  padding: 40px;
+
+  img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+.initial-screen__cta {
+  color: white;
+  padding-top: 40px;
+
+  h1 {
+    font-size: 120px;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 1px #F4F4F4;
+  }
+
+  h2 {
+    font-size: 70px;
+    color: #FAE0A7;
+    text-shadow: 1px 1px 1px #fcd888;
+  }
 }
 
 .initial-screen__search {
@@ -38,21 +50,43 @@
     input {
       width: 100%;
       color: white;
-      font-size: 30px;
+      font-size: 32px;
       border: none;
       background-color: transparent;
       font-weight: bolder;
       &::-webkit-input-placeholder {
         color: white;
-        opacity: 1;
+        opacity: 0.9;
       }
       &::-moz-placeholder {
         color: white;
-        opacity: 1;
+        opacity: 0.9;
       }
+      &:focus {
+        outline: none;
+      }
+    }
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: white !important;
     }
 }
 
 .initial-screen__instructions {
+  left: 30px;
+  text-align: center;
+  font-size: 60px;
 
+  a {
+    color: rgba(237, 99, 36, 0.9);
+    padding-right: 30px;
+    transition: 300ms;
+
+    &:hover {
+      color: rgb(237, 99, 36);
+    }
+  }
 }

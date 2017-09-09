@@ -37,7 +37,6 @@ gem 'jquery-rails'
 
 gem 'font-awesome-sass'
 
-gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 
 

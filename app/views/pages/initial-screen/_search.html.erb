@@ -1,6 +1,6 @@
 
 <%= form_for("", url: s_path, method: "GET", remote: true, html: { class: "search" } ) do |f| %>
-  <%= f.text_field :address, placeholder: "Search for a beach in Portugal..." %>
+  <%= f.text_field :address, placeholder: "Search for a beach in Portugal 🇵🇹", autofocus: true %>
 <% end %>
 
 <% content_for :after_js do %>
