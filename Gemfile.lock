@@ -85,8 +85,8 @@ GEM
     ffi (1.9.18-java)
     ffi (1.9.18-x64-mingw32)
     ffi (1.9.18-x86-mingw32)
-    font-awesome-rails (4.7.0.2)
-      railties (>= 3.2, < 5.2)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -254,7 +254,7 @@ DEPENDENCIES
   byebug
   cloudinary
   coffee-rails (~> 4.2)
-  font-awesome-rails
+  font-awesome-sass
   geocoder
   gmaps4rails
   jbuilder (~> 2.5)

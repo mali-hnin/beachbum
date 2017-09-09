@@ -1,0 +1,33 @@
+.legend__wrapper {
+  position: absolute;
+  top: calc(100vh + 5px);
+  left: 5px;
+  background-color: white;
+  box-shadow: 3px 3px 3px lightgray;
+}
+
+.legend__container {
+  padding: 20px 30px;
+}
+
+.legend__row {
+  ul {
+    list-style: none;
+
+  }
+  li {
+    max-width: 120px;
+    height: 50px;
+    word-wrap: break-word;
+    &:first-of-type {
+      margin-top: 30px;
+    }
+  }
+  input {
+    border: 2px solid rgba(131, 201, 244, 1);
+    border-radius: 5em;
+    color: darken(rgba(131, 201, 244, 1), 30%);
+    padding-left: 20px;
+    padding: 30px auto;
+  }
+}
