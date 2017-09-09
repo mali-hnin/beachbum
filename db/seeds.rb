@@ -31,6 +31,7 @@ beaches.each do |beach|
 
   Beach.create(
     name: beach.first,
+    photos: ['app/assets/images/beach.jpg'],
     address: beach.join(', '),
     category: ["rocky", "sandy", "extreme"].sample,
     bar: boolean.sample,
@@ -49,3 +50,5 @@ beaches.each do |beach|
     sand_type: ["fine white sand", "pebbles", "fine white sand"].sample
   )
 end
+
+
