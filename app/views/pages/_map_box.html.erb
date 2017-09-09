@@ -1,18 +1,39 @@
 <div class='container'>
-  <h2><%= beach.name %></h2>
-  <p><%= beach.address %>, <%= beach.country %></p>
-
-  <p>Category: <%= beach.category %></p>
-  <p>Sand Type: <%= beach.sand_type %></p>
-  <p>Price: <%= beach.price %></p>
-  <p>Beach Sports: <% beach.beach_sports.each do |sport| %>
-    <%= sport %> |
-    <% end %>
-  </p>
-  <p>Water Sports: <% beach.water_sports.each do |sport| %>
-    <%= sport %> |
-    <% end %>
-  </p>
-  <p>How crowded is it? <%= beach.crowd %></p>
-  <p>How long do I have to walk? <%= beach.walking_distance %>m</p>
+  <div class="content">
+    <%= image_tag 'beach.jpg', width: '300px' %>
+    <h2><%= beach.name %></h2>
+    <p><%= beach.city %>, <%= beach.country %></p>
+    <h3>Category</h3>
+    <p><%= beach.category %></p>
+    <h3>Sand Type</h3>
+    <p><%= beach.sand_type %></p>
+    <h3>Beach Sports</h3>
+    <p><% beach.beach_sports.each do |sport| %>
+      <%= sport %> |
+      <% end %>
+    </p>
+    <h3>Water Sports</h3>
+    <p><% beach.water_sports.each do |sport| %>
+      <%= sport %> |
+      <% end %>
+    </p>
+    <p><strong>How expensive is it?</strong> <% beach.price.times do %>
+        <%= image_tag '008-dollar-symbol.png', width: '20px' %>
+      <% end %>
+    </p>
+    <p><strong>How crowded is it?</strong>   <% beach.crowd.times do %>
+        <%= image_tag '007-people.png', width: '20px' %>
+      <% end %>
+      </p>
+    <p><strong>How long do I have to walk?</strong> <%= beach.walking_distance %>m</p>
+    <div class="icons">
+      <%= image_tag "011-summer-2.png", width: "50px", alt: "Bar" if beach.bar %>
+      <%= image_tag "nudist.png", height: "40px" if beach.nudist %>
+      <%= image_tag "006-people-1.png", width: "50px" if beach.nude_friendly %>
+      <%= image_tag "009-dog.png", width: "50px" if beach.pet_friendly %>
+      <%= image_tag "023-beach-1.png", width: "50px" if beach.surf %>
+      <%= image_tag "parking.png", width: "50px" if beach.parking %>
+      <%= image_tag "005-bus.png", width: "50px" if beach.public_transportation %>
+    </div>
+  </div>
 </div>
