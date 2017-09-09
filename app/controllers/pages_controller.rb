@@ -5,11 +5,15 @@ class PagesController < ApplicationController
     @hash = Gmaps4rails.build_markers(@beaches) do |beach, marker|
       marker.lat beach.latitude
       marker.lng beach.longitude
+
       marker.picture({
                       :url => beach.icon,
                       :width => 50,
                       :height => 50
                       })
+
+      marker.infowindow render_to_string(partial: "/pages/map_box", locals: { beach: beach })
+
     end
   end
 
@@ -21,15 +25,24 @@ class PagesController < ApplicationController
       marker.lat beach.latitude
       marker.lng beach.longitude
 
+
       marker.picture({
                       :url => beach.icon,
                       :width => 50,
                       :height => 50
                       })
+
+      marker.infowindow render_to_string(partial: "/pages/map_box", locals: { beach: beach })
+
     end
 
     respond_to do |format|
       format.js
     end
+  end
+
+  private
+  def beach_params
+    params.require(:beach).permit(:name, photos: [])
   end
 end
