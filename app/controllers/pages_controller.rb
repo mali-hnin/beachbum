@@ -24,4 +24,9 @@ class PagesController < ApplicationController
       format.js
     end
   end
+
+  private
+  def beach_params
+    params.require(:beach).permit(:name, photos: [])
+  end
 end
