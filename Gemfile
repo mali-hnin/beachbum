@@ -33,10 +33,8 @@ end
 # Front end gems
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'bootstrap-sass'
-gem 'font-awesome-rails'
 gem 'jquery-rails'
-
-
+gem 'font-awesome-sass'
 
 gem 'nokogiri'
 

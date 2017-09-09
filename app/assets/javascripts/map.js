@@ -9,11 +9,11 @@
   {
     // Remove current markers
     map.removeMarkers(__markers);
+    __markers = {}
 
     // Add each marker to the map according to received data
     __markers = _.map(markersData, function(markerJSON) {
       marker = map.addMarker(markerJSON);
-      map.getMap().setZoom(4); // Not sure this should be in this iterator!
 
       _.extend(marker, markerJSON);
 
@@ -21,11 +21,12 @@
         content: marker.infowindow
       });
 
+      map.getMap().setZoom(7); // Not sure this should be in this iterator!
       return marker;
     });
 
-    map.fitMapToBounds();
-    map.bounds.extendWith(__markers);
+    markerBounds.extend(__markers);
+    map.fitBounds(markerBounds);
   };
 
   // "Publish" our method on window. You should probably have your own namespace

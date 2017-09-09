@@ -13,7 +13,17 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @import "base/index";
 @import "layouts/index";
 @import "components/index";
+
+
+body {
+  margin: 0;
+  padding: 0;
+}

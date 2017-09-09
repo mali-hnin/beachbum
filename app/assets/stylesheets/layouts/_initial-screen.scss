@@ -1,0 +1,54 @@
+.initial-screen__wrapper {
+  background: url('http://images.huffingtonpost.com/2016-03-18-1458279164-1804018-image1.JPG');
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.initial-screen__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(131, 201, 244, 0.93);
+}
+
+.initial-screen__cta {
+  h1, h2 {
+    font-size: 100px;
+    color: white;
+  }
+}
+
+.initial-screen__logo {
+}
+
+.initial-screen__search {
+    padding: 10px;
+    margin: auto;
+    border-radius: 5em;
+    background-color: transparent;
+    border: 2px dotted white;
+    padding-left: 20px;
+    input {
+      width: 100%;
+      color: white;
+      font-size: 30px;
+      border: none;
+      background-color: transparent;
+      font-weight: bolder;
+      &::-webkit-input-placeholder {
+        color: white;
+        opacity: 1;
+      }
+      &::-moz-placeholder {
+        color: white;
+        opacity: 1;
+      }
+    }
+}
+
+.initial-screen__instructions {
+
+}

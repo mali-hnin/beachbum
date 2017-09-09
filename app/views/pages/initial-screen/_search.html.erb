@@ -1,0 +1,16 @@
+
+<%= form_for("", url: s_path, method: "GET", remote: true, html: { class: "search" } ) do |f| %>
+  <%= f.text_field :address, placeholder: "Search for a beach in Portugal..." %>
+<% end %>
+
+<% content_for :after_js do %>
+  <script>
+    $(document).ready(function() {
+      $('.search').on('submit', function() {
+        $('html, body').animate({
+          scrollTop: $("#map").offset().top
+        }, 'slow');
+      });
+    })
+  </script>
+<% end %>
