@@ -24,10 +24,20 @@
     }
   }
   input {
-    border: 2px solid rgba(131, 201, 244, 1);
-    border-radius: 5em;
+    border: none;
     color: darken(rgba(131, 201, 244, 1), 30%);
     padding-left: 20px;
     padding: 30px auto;
+    font-size: 20px;
+    line-height: 1.8;
+    background-color: rgb(245, 245, 245);
+  }
+  h4 {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: darken(rgba(131, 201, 244, 1), 30%);
+    padding-left: 20px;
+    border-bottom: 3px solid darken(rgba(131, 201, 244, 1), 30%);
+    padding-bottom: 10px;
   }
 }
