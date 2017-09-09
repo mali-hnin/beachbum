@@ -1,9 +1,10 @@
 <%= form_for("", url: s_path, method: "GET", remote: true) do |f| %>
-  <%= f.text_field :address, placeholder: "Type a location" %><br />
-  <%= f.submit %>
-<% end %>
+    <%= f.text_field :address, placeholder: "Type a location" %><br />
+    <%= f.submit %>
+  <% end %>
 
-<div id="map" style="width: 100%; height: 100vh;"></div>
+<div id="map" style="width: 100%; height: 100vh;">
+</div>
 
 <% content_for(:after_js) do %>
   <%= javascript_tag do %>
@@ -230,7 +231,7 @@
           mapTypeControl: false,
           maxZoom: 15,
           minZoom: 6,
-          zoom: 10,
+          zoom: 12,
           zoomControl: false
         },
         internal: {
