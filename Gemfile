@@ -34,19 +34,15 @@ end
 gem 'sass-rails', '~> 5.0' # Use SCSS for stylesheets
 gem 'bootstrap-sass'
 gem 'jquery-rails'
-
 gem 'font-awesome-sass'
-
 gem 'jquery-fileupload-rails'
-
-
-
-gem 'nokogiri'
 
 # Specific gems
 gem 'geocoder'
 gem 'gmaps4rails'
-gem 'cloudinary'
+gem 'cloudinary', '1.1.7'
+gem 'nokogiri'
+gem 'attachinary', github: 'assembler/attachinary'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
